@@ -19,9 +19,9 @@ from sklearn.preprocessing import MinMaxScaler
 import pickle
 
 
-df_train_ = pd.read_csv('src/prepare_data/df_train_.csv', sep = ',')
+df_train_ = pd.read_csv('./src/prepare_data/df_train_.csv', sep = ',')
 df_train_=df_train_.drop(columns=["Unnamed: 0"])
-df_test_ = pd.read_csv('src/prepare_data/df_test_.csv', sep = ',')
+df_test_ = pd.read_csv('./src/prepare_data/df_test_.csv', sep = ',')
 df_test_=df_test_.drop(columns=["Unnamed: 0"])
 
 
@@ -72,7 +72,7 @@ linreg.fit(X_train, y_train)
 
 
 # Save to file in the current working directory
-pkl_filename = "src/models/LinearRegression_model.pkl"
+pkl_filename = "./src/models/LinearRegression_model.pkl"
 with open(pkl_filename, 'wb') as file:
     pickle.dump(linreg, file)
 
@@ -82,7 +82,7 @@ with open(pkl_filename, 'wb') as file:
 lasso = linear_model.Lasso(alpha=0.001)
 lasso.fit(X_train, y_train)   
  # Save to file in the current working directory
-pkl_filename_lasso = "src/models/Lasso_model.pkl"
+pkl_filename_lasso = "./src/models/Lasso_model.pkl"
 with open(pkl_filename_lasso, 'wb') as file:
     pickle.dump(lasso, file)
 
@@ -100,7 +100,7 @@ X_test_poly = poly.fit_transform(X_test)
 polyreg = linear_model.LinearRegression()
 polyreg.fit(X_train_poly, y_train)    
  # Save to file in the current working directory
-pkl_filename_polyreg = "src/models/polyreg_model.pkl"
+pkl_filename_polyreg = "./src/models/polyreg_model.pkl"
 with open(pkl_filename_polyreg, 'wb') as file:
     pickle.dump(polyreg, file)
 
@@ -112,7 +112,7 @@ dtrg = DecisionTreeRegressor(max_depth=7, random_state=123)
 dtrg.fit(X_train, y_train)
 
  # Save to file in the current working directory
-pkl_filename_DecisionTreeRegressor = "src/models/DecisionTreeRegressor_model.pkl"
+pkl_filename_DecisionTreeRegressor = "./src/models/DecisionTreeRegressor_model.pkl"
 with open(pkl_filename_DecisionTreeRegressor, 'wb') as file:
     pickle.dump(dtrg, file)
 
@@ -127,6 +127,6 @@ rf = RandomForestRegressor(n_estimators=100, max_features=3, max_depth=4, n_jobs
 rf.fit(X_train, y_train)    
 
  # Save to file in the current working directory
-pkl_filename_rf = "src/models/RandomForestRegressor.pkl"
+pkl_filename_rf = "./src/models/RandomForestRegressor.pkl"
 with open(pkl_filename_rf, 'wb') as file:
     pickle.dump(rf, file)
