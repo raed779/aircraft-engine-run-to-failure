@@ -4,50 +4,44 @@ stages:
     cmd: python src/prepare_data.py
     deps:
     - path: src/prepare_data.py
-      md5: 86ba1a69069cffd839a405bafd994f34
-      size: 2745
+      md5: 393e7b166c5c5c66ce8db2826d77ea7b
+      size: 2707
     outs:
-    - path: src/prepare_data/df_test_.csv
+    - path: df_test_.csv
       md5: fe90c7ff8e23ccef2d1d5f117f58a587
       size: 17528
-    - path: src/prepare_data/df_train_.csv
+    - path: df_train_.csv
       md5: ae3f58b9adbc5c11ee777d742d903bd8
       size: 3642088
   modeling:
     cmd: python src/modeling.py
     deps:
     - path: src/modeling.py
-      md5: 154434d04f7c64f7bad49c6b31b727dd
-      size: 4525
+      md5: f98ccc7077b0e0c22c69d4d1e83b472a
+      size: 4422
     outs:
-    - path: src/models/DecisionTreeRegressor_model.pkl
+    - path: DecisionTreeRegressor_model.pkl
       md5: c8da857c0bbe0b45c94578da48da1c9f
       size: 17629
-    - path: src/models/Lasso_model.pkl
+    - path: Lasso_model.pkl
       md5: a20bea05c9efdbd68c99085961401b68
       size: 958
-    - path: src/models/LinearRegression_model.pkl
+    - path: LinearRegression_model.pkl
       md5: 2e6233dd1b5ee5adf349e5e86bce5e9e
       size: 940
-    - path: src/models/RandomForestRegressor.pkl
+    - path: RandomForestRegressor.pkl
       md5: e8ebf6414eeb16b500ecf5950adbecac
       size: 231642
-    - path: src/models/polyreg_model.pkl
+    - path: polyreg_model.pkl
       md5: 3955cb29780088f4f66a9ea4e527bfa7
       size: 1817
   evaluate:
     cmd: python src/evaluate.py
     deps:
     - path: src/evaluate.py
-      md5: 5b525de7cccf3744ff2fc7ea235a4036
-      size: 7415
-    - path: src/prepare_data/df_test_.csv
-      md5: fe90c7ff8e23ccef2d1d5f117f58a587
-      size: 17528
-    - path: src/prepare_data/df_train_.csv
-      md5: ae3f58b9adbc5c11ee777d742d903bd8
-      size: 3642088
+      md5: 201e03f7bda528b99017330e69f1997d
+      size: 7306
     outs:
-    - path: src/export.json
+    - path: export.json
       md5: e623be3486729d9a6f85fcb9ad954fd8
       size: 775

@@ -21,9 +21,9 @@ from sklearn.preprocessing import PolynomialFeatures
 
 
 
-df_train_ = pd.read_csv('./src/prepare_data/df_train_.csv', sep = ',')
+df_train_ = pd.read_csv('df_train_.csv', sep = ',')
 df_train_=df_train_.drop(columns=["Unnamed: 0"])
-df_test_ = pd.read_csv('./src/prepare_data/df_test_.csv', sep = ',')
+df_test_ = pd.read_csv('df_test_.csv', sep = ',')
 df_test_=df_test_.drop(columns=["Unnamed: 0"])
 
 
@@ -53,11 +53,11 @@ X_test = df_test_[features]
 y_test = df_test_['ttf']
 
 
-pkl_filename = "./src/models/LinearRegression_model.pkl"
-pkl_filename_polyreg = "./src/models/polyreg_model.pkl"
-pkl_filename_lasso = "./src/models/Lasso_model.pkl"
-pkl_filename_DecisionTreeRegressor = "./src/models/DecisionTreeRegressor_model.pkl"
-pkl_filename_rf = "./src/models/RandomForestRegressor.pkl"
+pkl_filename = "LinearRegression_model.pkl"
+pkl_filename_polyreg = "polyreg_model.pkl"
+pkl_filename_lasso = "Lasso_model.pkl"
+pkl_filename_DecisionTreeRegressor = "DecisionTreeRegressor_model.pkl"
+pkl_filename_rf = "RandomForestRegressor.pkl"
 
 # Load from file
 with open(pkl_filename, 'rb') as file:
@@ -193,4 +193,4 @@ results=pd.concat([polyreg_metrics, lasso_metrics ,df_regr_metrics,dtrg_metrics,
 print(results)
 
 
-result2 = results.to_json('./src/export.json', orient='index')
+result2 = results.to_json('export.json', orient='index')

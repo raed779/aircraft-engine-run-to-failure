@@ -4,26 +4,25 @@ stages:
     deps:
     - src/prepare_data.py
     outs:
-    - src/prepare_data/df_test_.csv
-    - src/prepare_data/df_train_.csv
+    - df_test_.csv
+    - df_train_.csv
   modeling:
     cmd: python src/modeling.py
     deps:
     - src/modeling.py
     outs:
-    - src/models/DecisionTreeRegressor_model.pkl
-    - src/models/Lasso_model.pkl 
-    - src/models/LinearRegression_model.pkl
-    - src/models/polyreg_model.pkl
-    - src/models/RandomForestRegressor.pkl
+    - DecisionTreeRegressor_model.pkl
+    - Lasso_model.pkl 
+    - LinearRegression_model.pkl
+    - polyreg_model.pkl
+    - RandomForestRegressor.pkl
 
   evaluate:
     cmd: python src/evaluate.py
     deps:
     - src/evaluate.py
-    - src/prepare_data/df_test_.csv
-    - src/prepare_data/df_train_.csv
+
     
     metrics:
-    - src/export.json:
+    - export.json:
         cache: false
