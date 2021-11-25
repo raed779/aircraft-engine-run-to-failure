@@ -1,0 +1,19 @@
+stages:
+  prepare_data:
+    cmd: python src/prepare_data.py
+    deps:
+    - src/prepare_data.py
+    outs:
+    - src/prepare_data/df_test_.csv
+    - src/prepare_data/df_train_.csv
+  modeling:
+    cmd: python src/modeling.py
+    deps:
+    - src/modeling.py
+    outs:
+    - src/models/DecisionTreeRegressor_model.pkl
+    - src/models/Lasso_model.pkl 
+    - src/models/LinearRegression_model.pkl
+    - src/models/polyreg_model.pkl
+    - src/models/RandomForestRegressor.pkl
+   
