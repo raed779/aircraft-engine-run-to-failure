@@ -20,7 +20,7 @@ col_names = ['id','cycle','setting1','setting2','setting3','s1','s2','s3','s4','
 
 #load training data
 
-df_train = pd.read_csv('mlops/aircraft-engine-run-to-failure/src/data/PM_train.txt', sep = ' ', header=None)
+df_train = pd.read_csv('src/data/PM_train.txt', sep = ' ', header=None)
 
 
 
@@ -30,12 +30,12 @@ df_train = pd.read_csv('mlops/aircraft-engine-run-to-failure/src/data/PM_train.t
 df_train.drop([26,27], axis=1, inplace=True)
 df_train.columns = col_names
 
-df_test = pd.read_csv('mlops/aircraft-engine-run-to-failure/src/data/PM_test.txt', sep = ' ', header=None)
+df_test = pd.read_csv('src/data/PM_test.txt', sep = ' ', header=None)
 
 df_test.drop([26,27], axis=1, inplace=True)
 df_test.columns = col_names
 
-df_truth = pd.read_csv('mlops/aircraft-engine-run-to-failure/src/data/PM_truth.txt', sep = ' ', header=None)
+df_truth = pd.read_csv('src/data/PM_truth.txt', sep = ' ', header=None)
 
 df_truth=df_truth.drop(columns=1)
 df_truth = df_truth.rename(columns = {0: 'ttf'}, inplace = False)
@@ -93,8 +93,8 @@ period=30
 df_train_=prepare_train_data(df_train, period)    
 df_test_=prepare_test_data(df_test, df_truth, period=30)
 
-df_train_.to_csv("mlops/aircraft-engine-run-to-failure/src/prepare_data/df_train_.csv")
-df_test_.to_csv("mlops/aircraft-engine-run-to-failure/src/prepare_data/df_test_.csv")
+df_train_.to_csv("src/prepare_data/df_train_.csv")
+df_test_.to_csv("src/prepare_data/df_test_.csv")
 
 
 print("####### done ###########")
