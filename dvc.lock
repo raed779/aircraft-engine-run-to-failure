@@ -4,8 +4,8 @@ stages:
     cmd: python src/prepare_data.py
     deps:
     - path: src/prepare_data.py
-      md5: b8892b1e4fed94d426eba1a4a84bf91c
-      size: 2741
+      md5: 86ba1a69069cffd839a405bafd994f34
+      size: 2745
     outs:
     - path: src/prepare_data/df_test_.csv
       md5: fe90c7ff8e23ccef2d1d5f117f58a587
