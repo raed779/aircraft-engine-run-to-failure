@@ -17,4 +17,13 @@ stages:
     - src/models/polyreg_model.pkl
     - src/models/RandomForestRegressor.pkl
 
- 
+  evaluate:
+    cmd: python src/evaluate.py
+    deps:
+    - src/evaluate.py
+    - src/prepare_data/df_test_.csv
+    - src/prepare_data/df_train_.csv
+    
+    metrics:
+    - src/export.json:
+        cache: false
