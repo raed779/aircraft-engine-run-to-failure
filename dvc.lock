@@ -35,3 +35,13 @@ stages:
     - path: src/models/polyreg_model.pkl
       md5: 3955cb29780088f4f66a9ea4e527bfa7
       size: 1817
+  evaluate:
+    cmd: python src/evaluate.py
+    deps:
+    - path: src/evaluate.py
+      md5: 358bc4d278311da0a6720f4dea659b18
+      size: 7399
+    outs:
+    - path: src/export.json
+      md5: e623be3486729d9a6f85fcb9ad954fd8
+      size: 775
