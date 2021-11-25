@@ -1,11 +1,11 @@
 schema: '2.0'
 stages:
   prepare_data:
-    cmd: python src/prepare_data.py
+    cmd: python prepare_data.py
     deps:
-    - path: src/prepare_data.py
-      md5: 393e7b166c5c5c66ce8db2826d77ea7b
-      size: 2707
+    - path: prepare_data.py
+      md5: 82b1a7d3fee8371d4c6b7cad3813aa5e
+      size: 2680
     outs:
     - path: df_test_.csv
       md5: fe90c7ff8e23ccef2d1d5f117f58a587
@@ -14,9 +14,9 @@ stages:
       md5: ae3f58b9adbc5c11ee777d742d903bd8
       size: 3642088
   modeling:
-    cmd: python src/modeling.py
+    cmd: python modeling.py
     deps:
-    - path: src/modeling.py
+    - path: modeling.py
       md5: f98ccc7077b0e0c22c69d4d1e83b472a
       size: 4422
     outs:
@@ -36,9 +36,9 @@ stages:
       md5: 3955cb29780088f4f66a9ea4e527bfa7
       size: 1817
   evaluate:
-    cmd: python src/evaluate.py
+    cmd: python evaluate.py
     deps:
-    - path: src/evaluate.py
+    - path: evaluate.py
       md5: 201e03f7bda528b99017330e69f1997d
       size: 7306
     outs:

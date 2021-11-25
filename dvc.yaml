@@ -1,15 +1,15 @@
 stages:
   prepare_data:
-    cmd: python src/prepare_data.py
+    cmd: python prepare_data.py
     deps:
-    - src/prepare_data.py
+    - prepare_data.py
     outs:
     - df_test_.csv
     - df_train_.csv
   modeling:
-    cmd: python src/modeling.py
+    cmd: python modeling.py
     deps:
-    - src/modeling.py
+    - modeling.py
     outs:
     - DecisionTreeRegressor_model.pkl
     - Lasso_model.pkl 
@@ -18,9 +18,9 @@ stages:
     - RandomForestRegressor.pkl
 
   evaluate:
-    cmd: python src/evaluate.py
+    cmd: python evaluate.py
     deps:
-    - src/evaluate.py
+    - evaluate.py
 
     
     metrics:
