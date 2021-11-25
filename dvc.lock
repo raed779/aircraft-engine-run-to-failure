@@ -13,3 +13,25 @@ stages:
     - path: src/prepare_data/df_train_.csv
       md5: ae3f58b9adbc5c11ee777d742d903bd8
       size: 3642088
+  modeling:
+    cmd: python src/modeling.py
+    deps:
+    - path: src/modeling.py
+      md5: 4d1901020939de8d88a1c7d67bd29ffd
+      size: 4511
+    outs:
+    - path: src/models/DecisionTreeRegressor_model.pkl
+      md5: c8da857c0bbe0b45c94578da48da1c9f
+      size: 17629
+    - path: src/models/Lasso_model.pkl
+      md5: a20bea05c9efdbd68c99085961401b68
+      size: 958
+    - path: src/models/LinearRegression_model.pkl
+      md5: 2e6233dd1b5ee5adf349e5e86bce5e9e
+      size: 940
+    - path: src/models/RandomForestRegressor.pkl
+      md5: e8ebf6414eeb16b500ecf5950adbecac
+      size: 231642
+    - path: src/models/polyreg_model.pkl
+      md5: 3955cb29780088f4f66a9ea4e527bfa7
+      size: 1817

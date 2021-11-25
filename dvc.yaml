@@ -16,4 +16,10 @@ stages:
     - src/models/LinearRegression_model.pkl
     - src/models/polyreg_model.pkl
     - src/models/RandomForestRegressor.pkl
-   
+
+  evaluate:
+    cmd: python src/evaluate.py
+    deps:
+    - src/evaluate.py
+    outs:
+    - src/export.json
