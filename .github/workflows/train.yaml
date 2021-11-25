@@ -21,6 +21,7 @@ jobs:
         run: |
           # Your ML workflow goes here
           pip install -r requirements.txt
+          echo "oky raed -------"
           dvc repro
 
           git fetch --prune
