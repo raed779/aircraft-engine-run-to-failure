@@ -13,8 +13,8 @@ jobs:
           pip install -r requirements.txt
           dvc repro 
 
-         
-          dvc metrics diff --show-md master > report.md
+          git fetch --prune
+          
 
           # Add figure to the report
           echo "## Validating results by region"
