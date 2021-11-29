@@ -1,20 +1,24 @@
 stages:
-  prepare_data:
-    cmd: python src/prepare_data.py
+  get_data:
+    cmd: python get_data.py
     deps:
-    - src/prepare_data.py
+    - get_data.py
     outs:
-    - src/prepare_data/df_test_.csv
-    - src/prepare_data/df_train_.csv
-  modeling:
-    cmd: python src/modeling.py
+    - data_raw.csv  
+  process:
+    cmd: python process_data.py
     deps:
-    - src/modeling.py
+    - process_data.py
+    - data_raw.csv
     outs:
-    - src/models/DecisionTreeRegressor_model.pkl
-    - src/models/Lasso_model.pkl 
-    - src/models/LinearRegression_model.pkl
-    - src/models/polyreg_model.pkl
-    - src/models/RandomForestRegressor.pkl
-
- 
+    - data_processed.csv
+  train:
+    cmd: python train.py
+    deps:
+    - train.py
+    - data_processed.csv
+    outs:
+    - by_region.png
+    metrics:
+    - metrics.json:
+        cache: false
