@@ -18,7 +18,7 @@ import pickle
 
 from sklearn.preprocessing import PolynomialFeatures
 
-import dataframe_image as dfi
+
 
 
 df_train_ = pd.read_csv('df_train_.csv', sep = ',')
@@ -31,7 +31,7 @@ df_test_=df_test_.drop(columns=["Unnamed: 0"])
 
 # original features
 original_features= ['setting1','setting2','setting3','s1','s2','s3','s4','s5','s6','s7','s8','s9','s10','s11','s12','s13','s14','s15','s16','s17','s18','s19','s20','s21']
-
+import dataframe_image as dfi
 # original + extracted fetures
 features_adxf = ['setting1', 'setting2', 'setting3', 's1', 's2', 's3', 's4', 's5', 's6', 's7', 's8', 's9', 's10', 's11', 's12', 's13', 's14', 's15', 's16', 's17', 's18', 's19', 's20', 's21', 'av1', 'av2', 'av3', 'av4', 'av5', 'av6', 'av7', 'av8', 'av9', 'av10', 'av11', 'av12', 'av13', 'av14', 'av15', 'av16', 'av17', 'av18', 'av19', 'av20', 'av21', 'sd1', 'sd2', 'sd3', 'sd4', 'sd5', 'sd6', 'sd7', 'sd8', 'sd9', 'sd10', 'sd11', 'sd12', 'sd13', 'sd14', 'sd15', 'sd16', 'sd17', 'sd18', 'sd19', 'sd20', 'sd21']
 
