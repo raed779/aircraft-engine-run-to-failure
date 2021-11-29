@@ -16,9 +16,15 @@ stages:
   modeling:
     cmd: python modeling.py
     deps:
+    - path: df_test_.csv
+      md5: fe90c7ff8e23ccef2d1d5f117f58a587
+      size: 17528
+    - path: df_train_.csv
+      md5: ae3f58b9adbc5c11ee777d742d903bd8
+      size: 3642088
     - path: modeling.py
-      md5: f98ccc7077b0e0c22c69d4d1e83b472a
-      size: 4422
+      md5: 476ac1ca01b3dc2e2a36ae6ce376a6e9
+      size: 4426
     outs:
     - path: DecisionTreeRegressor_model.pkl
       md5: c8da857c0bbe0b45c94578da48da1c9f

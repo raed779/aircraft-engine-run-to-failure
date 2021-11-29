@@ -10,6 +10,8 @@ stages:
     cmd: python modeling.py
     deps:
     - modeling.py
+    - df_test_.csv
+    - df_train_.csv
     outs:
     - DecisionTreeRegressor_model.pkl
     - Lasso_model.pkl 
