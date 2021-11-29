@@ -16,7 +16,7 @@ jobs:
        
           echo "oky raed -------"
           echo "oky raed 2 -------"
-          git fetch --prune
+          
           
 
           # Add figure to the report
