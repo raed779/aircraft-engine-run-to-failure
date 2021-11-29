@@ -18,7 +18,7 @@ import pickle
 
 from sklearn.preprocessing import PolynomialFeatures
 
-
+import dataframe_image as dfi
 
 
 df_train_ = pd.read_csv('df_train_.csv', sep = ',')
@@ -195,5 +195,5 @@ print(results)
 
 result2 = results.to_json('export.json', orient='index')
 
-#import dataframe_image as dfi
-#f=dfi.export(results, 'result_export.png')
+
+dfi.export(results, 'result_export.png')
