@@ -17,7 +17,7 @@ jobs:
           
           echo "rag ya m3alem "
           echo "## Validating results metrics" >> report.md
-          dvc metrics show -a>> report.md
+          dvc metrics show --json >> report.md
  
           cml-send-comment report.md
           
