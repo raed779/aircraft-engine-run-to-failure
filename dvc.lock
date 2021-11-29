@@ -45,12 +45,9 @@ stages:
     cmd: python evaluate.py
     deps:
     - path: evaluate.py
-      md5: 22d26a12e9fb628b1e0fb39a4aee9893
-      size: 7383
+      md5: 6ab9ad9765f2fd80b7848757660e7294
+      size: 7387
     outs:
     - path: export.json
       md5: e623be3486729d9a6f85fcb9ad954fd8
       size: 775
-    - path: result_export.png
-      md5: 11136654d2b802bc5590395322e53d22
-      size: 16463
