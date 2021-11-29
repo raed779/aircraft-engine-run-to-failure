@@ -17,9 +17,9 @@ jobs:
           echo "oky raed -------"
           echo "oky raed 2 -------"
           
-          
+          dvc metrics diff master show >> report.md
           cat metrics.json >> report.md
-          # Add figure to the report
+         
           echo "## Validating results by region" >> report.md
           cml-publish by_region.png --md >> report.md
 
