@@ -194,3 +194,6 @@ print(results)
 
 
 result2 = results.to_json('export.json', orient='index')
+
+import dataframe_image as dfi
+f=dfi.export(results, 'result_export.png')

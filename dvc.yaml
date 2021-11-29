@@ -24,6 +24,8 @@ stages:
     deps:
     - evaluate.py
 
+    outs:
+    - result_export.png  
     
     metrics:
     - export.json:

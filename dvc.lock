@@ -1,5 +1,18 @@
 schema: '2.0'
 stages:
+  evaluate:
+    cmd: python evaluate.py
+    deps:
+    - path: evaluate.py
+      md5: 22d26a12e9fb628b1e0fb39a4aee9893
+      size: 7383
+    outs:
+    - path: export.json
+      md5: e623be3486729d9a6f85fcb9ad954fd8
+      size: 775
+    - path: result_export.png
+      md5: 11136654d2b802bc5590395322e53d22
+      size: 16463
   prepare_data:
     cmd: python prepare_data.py
     deps:
@@ -41,13 +54,3 @@ stages:
     - path: polyreg_model.pkl
       md5: 3955cb29780088f4f66a9ea4e527bfa7
       size: 1817
-  evaluate:
-    cmd: python evaluate.py
-    deps:
-    - path: evaluate.py
-      md5: 201e03f7bda528b99017330e69f1997d
-      size: 7306
-    outs:
-    - path: export.json
-      md5: e623be3486729d9a6f85fcb9ad954fd8
-      size: 775
