@@ -16,7 +16,8 @@ jobs:
           dvc repro
           
           echo "rag ya m3alem "
-       
+          echo "## Validating results metrics" >> report.md
+          dvc metrics show >> report.md
        
           cml-send-comment report.md
           
