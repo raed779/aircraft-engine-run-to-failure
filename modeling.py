@@ -17,7 +17,7 @@ from sklearn import linear_model
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.preprocessing import MinMaxScaler
 import pickle
-
+#yes
 
 df_train_ = pd.read_csv('df_train_.csv', sep = ',')
 df_train_=df_train_.drop(columns=["Unnamed: 0"])
