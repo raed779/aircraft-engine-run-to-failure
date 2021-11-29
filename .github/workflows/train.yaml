@@ -17,7 +17,7 @@ jobs:
           
           echo "rag ya m3alem "
           echo "## Validating results metrics" >> report.md
-          
-          cml-publish result_export.png --md >> report.md
+          dvc metrics show >> report.md
+        
           cml-send-comment report.md
           
