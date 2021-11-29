@@ -17,7 +17,7 @@ jobs:
           echo "oky raed -------"
           echo "oky raed 2 -------"
           
-          dvc metrics diff master show >> report.md
+          dvc metrics show >> report.md
           cat metrics.json >> report.md
          
           echo "## Validating results by region" >> report.md
