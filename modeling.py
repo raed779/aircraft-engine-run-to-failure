@@ -5,7 +5,7 @@ import pandas as pd
 import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
-
+# hey
 from scipy.stats import norm
 from sklearn.preprocessing import StandardScaler
 from scipy import stats
