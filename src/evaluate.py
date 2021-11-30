@@ -191,9 +191,8 @@ rf_metrics.columns = ['Random Forest Regression']
 
 results=pd.concat([polyreg_metrics, lasso_metrics ,df_regr_metrics,dtrg_metrics,rf_metrics], axis=1)
 print(results)
-<<<<<<< HEAD
-=======
-#eheyyyyyyyyyyyyyyyyyyy
->>>>>>> test-all
+
+
+
 
 result2 = results.to_json('./src/export.json', orient='index')
