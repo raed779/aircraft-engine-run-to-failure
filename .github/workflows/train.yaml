@@ -14,7 +14,9 @@ jobs:
           pip install -r requirements.txt
           echo "oky raed -------"
           dvc repro
-
-       
-          cml-send-comment report.md
           
+          echo "rag ya m3alem "
+          echo "## Validating results metrics" >> report.md
+          dvc metrics show --show-md >> report.md
+ 
+          cml-send-comment report.md

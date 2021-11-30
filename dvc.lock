@@ -35,19 +35,3 @@ stages:
     - path: src/models/polyreg_model.pkl
       md5: 3955cb29780088f4f66a9ea4e527bfa7
       size: 1817
-  evaluate:
-    cmd: python src/evaluate.py
-    deps:
-    - path: src/evaluate.py
-      md5: 5b525de7cccf3744ff2fc7ea235a4036
-      size: 7415
-    - path: src/prepare_data/df_test_.csv
-      md5: fe90c7ff8e23ccef2d1d5f117f58a587
-      size: 17528
-    - path: src/prepare_data/df_train_.csv
-      md5: ae3f58b9adbc5c11ee777d742d903bd8
-      size: 3642088
-    outs:
-    - path: src/export.json
-      md5: e623be3486729d9a6f85fcb9ad954fd8
-      size: 775
