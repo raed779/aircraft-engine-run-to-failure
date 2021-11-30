@@ -22,6 +22,11 @@ stages:
     cmd: python src/evaluate.py
     deps:
     - src/evaluate.py
+    - src/models/DecisionTreeRegressor_model.pkl
+    - src/models/Lasso_model.pkl 
+    - src/models/LinearRegression_model.pkl
+    - src/models/polyreg_model.pkl
+    - src/models/RandomForestRegressor.pkl
 
 
     metrics:
