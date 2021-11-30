@@ -45,8 +45,23 @@ stages:
     cmd: python src/evaluate.py
     deps:
     - path: src/evaluate.py
-      md5: 288b964f2adef69d2e11a4317d2ff261
-      size: 7418
+      md5: 02ddb8a57ed6277fda3f1cceb8633c4f
+      size: 7438
+    - path: src/models/DecisionTreeRegressor_model.pkl
+      md5: c8da857c0bbe0b45c94578da48da1c9f
+      size: 17629
+    - path: src/models/Lasso_model.pkl
+      md5: a20bea05c9efdbd68c99085961401b68
+      size: 958
+    - path: src/models/LinearRegression_model.pkl
+      md5: 2e6233dd1b5ee5adf349e5e86bce5e9e
+      size: 940
+    - path: src/models/RandomForestRegressor.pkl
+      md5: e8ebf6414eeb16b500ecf5950adbecac
+      size: 231642
+    - path: src/models/polyreg_model.pkl
+      md5: 3955cb29780088f4f66a9ea4e527bfa7
+      size: 1817
     outs:
     - path: src/export.json
       md5: e623be3486729d9a6f85fcb9ad954fd8
