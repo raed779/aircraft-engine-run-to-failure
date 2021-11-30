@@ -19,7 +19,7 @@ stages:
     - src/models/polyreg_model.pkl
     - src/models/RandomForestRegressor.pkl
   evaluate:
-    cmd: python evaluate.py
+    cmd: python src/evaluate.py
     deps:
     - src/evaluate.py
 
