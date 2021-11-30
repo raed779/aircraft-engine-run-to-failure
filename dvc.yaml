@@ -25,5 +25,5 @@ stages:
 
 
     metrics:
-    - export.json:
+    - src/export.json:
         cache: false

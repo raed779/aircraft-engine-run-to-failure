@@ -93,8 +93,8 @@ period=30
 df_train_=prepare_train_data(df_train, period)    
 df_test_=prepare_test_data(df_test, df_truth, period=30)
 
-df_train_.to_csv("./src/prepare_data/df_train_.csv")
-df_test_.to_csv("./src/prepare_data/df_test_.csv")
+df_train_.to_csv("src/prepare_data/df_train_.csv")
+df_test_.to_csv("src/prepare_data/df_test_.csv")
 
 
 print("####### done ###########")
